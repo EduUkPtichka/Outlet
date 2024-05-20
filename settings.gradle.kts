@@ -28,6 +28,7 @@ dependencyResolutionManagement {
     }
 }
 
-include(":composeApp")
+//include(":composeApp")
 include(":common-resource")
-include(":common-feature-registration:compose-ui")
+//include(":common-feature-registration:compose-ui")
+include(":common-feature-reg:compose-ui")

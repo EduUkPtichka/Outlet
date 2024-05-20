@@ -1,6 +1,4 @@
 [versions]
-androidx-activityCompose = "1.9.0"
-compose = "1.6.7"
 # ------- Android setting -------
 android-compileSdk = "34"
 android-minSdk = "24"
@@ -9,29 +7,33 @@ android-targetSdk = "34"
 # ------- Plugins Version -------
 
 #   https://github.com/JetBrains/compose-multiplatform/releases
-jetbrains-composeMultiplatformPlugin = "1.6.10-beta02"
+jetbrains-composeMultiplatformPlugin = "1.6.2"
 jetbrains-kotlinMultiplatformPlugin = "1.9.23"
 agp = "8.2.2"
-
-moko-resourcesV = "0.24.0-beta-3"
+moko-mobileMultiplatformResources = "0.24.0-beta-3"
 
 # ------- Libs Version -------
 
 # Compose Multiplatform
-jetbrains-ComposeMultiplatformV = "1.6.10-beta02"
+jetbrains-composeMultiplatformV = "1.6.2"
+compose = "1.6.7"
 
 # Jetbrains
 jetbrains-kotlinxCollectionsImmutableV = "0.3.7"
 
 
+androidx-activityCompose = "1.9.0"
+
+moko-resourcesV = "0.24.0-beta-3"
+
 [libraries]
 
 # Compose Multiplatform
-jetbrains-composeRuntime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "jetbrains-ComposeMultiplatformV" } #runtimeOnly
-jetbrains-composeMaterial = { module = "org.jetbrains.compose.material:material", version.ref = "jetbrains-ComposeMultiplatformV" } #runtimeOnly
-jetbrains-composeMaterial3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "jetbrains-ComposeMultiplatformV" } #runtimeOnly
-jetbrains-composeFoundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "jetbrains-ComposeMultiplatformV" } #runtimeOnly
-jetbrains-composeUi = { module = "org.jetbrains.compose.ui:ui", version.ref = "jetbrains-ComposeMultiplatformV" } #runtimeOnly
+jetbrains-composeRuntime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "jetbrains-composeMultiplatformV" } #runtimeOnly
+jetbrains-composeMaterial = { module = "org.jetbrains.compose.material:material", version.ref = "jetbrains-composeMultiplatformV" } #runtimeOnly
+jetbrains-composeMaterial3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "jetbrains-composeMultiplatformV" } #runtimeOnly
+jetbrains-composeFoundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "jetbrains-composeMultiplatformV" } #runtimeOnly
+jetbrains-composeUi = { module = "org.jetbrains.compose.ui:ui", version.ref = "jetbrains-composeMultiplatformV" } #runtimeOnly
 
 # Jetbrains
 jetbrains-kotlinxCollectionsImmutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "jetbrains-kotlinxCollectionsImmutableV" }
@@ -40,16 +42,15 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 
-# Moko
 moko-resources = { module = "dev.icerock.moko:resources", version.ref = "moko-resourcesV" }
 moko-resourcesCompose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-resourcesV" }
 
 # ------ Plugins -------
-mokoResourcesGenerator = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-resourcesV" }
+mokoResourcesGenerator = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-mobileMultiplatformResources" }
 
 [plugins]
-mobileMultiplatformResources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-resourcesV" }
-androidApplicationPlugin = { id = "com.android.application", version.ref = "agp" }
-androidLibraryPlugin = { id = "com.android.library", version.ref = "agp" }
-jetbrainsComposeMultiplatformPlugin = { id = "org.jetbrains.compose", version.ref = "jetbrains-composeMultiplatformPlugin" }
-kotlinMultiplatformPlugin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "jetbrains-kotlinMultiplatformPlugin" }
+android-application-plugin = { id = "com.android.application", version.ref = "agp" }
+android-library-plugin = { id = "com.android.library", version.ref = "agp" }
+jetbrains-compose-multiplatform-plugin = { id = "org.jetbrains.compose", version.ref = "jetbrains-composeMultiplatformPlugin" }
+jetbrains-kotlin-multiplatform-plugin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "jetbrains-kotlinMultiplatformPlugin" }
+moko-mobile-multiplatform-resources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-mobileMultiplatformResources" }

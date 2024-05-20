@@ -2,10 +2,10 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
-    alias(libs.plugins.kotlinMultiplatformPlugin)
-    alias(libs.plugins.jetbrainsComposeMultiplatformPlugin)
-    alias(libs.plugins.androidLibraryPlugin)
-    alias(libs.plugins.mobileMultiplatformResources)
+    alias(libs.plugins.android.library.plugin)
+    alias(libs.plugins.jetbrains.compose.multiplatform.plugin)
+    alias(libs.plugins.jetbrains.kotlin.multiplatform.plugin)
+    alias(libs.plugins.moko.mobile.multiplatform.resources)
 }
 
 kotlin {
@@ -51,7 +51,7 @@ kotlin {
 }
 
 android {
-    namespace = "determent.outlet.reg_composeUi"
+    namespace = "determent.outlet.reg_compose_ui"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")

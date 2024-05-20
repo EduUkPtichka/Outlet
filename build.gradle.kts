@@ -1,9 +1,8 @@
 plugins {
-    alias(libs.plugins.androidApplicationPlugin) apply false
-    alias(libs.plugins.androidLibraryPlugin) apply false
-    alias(libs.plugins.jetbrainsComposeMultiplatformPlugin) apply false
-    alias(libs.plugins.kotlinMultiplatformPlugin) apply false
-    alias(libs.plugins.mobileMultiplatformResources) apply false
+    alias(libs.plugins.android.library.plugin) apply false
+    alias(libs.plugins.jetbrains.compose.multiplatform.plugin) apply false
+    alias(libs.plugins.jetbrains.kotlin.multiplatform.plugin) apply false
+    alias(libs.plugins.moko.mobile.multiplatform.resources) apply false
 }
 
 buildscript {

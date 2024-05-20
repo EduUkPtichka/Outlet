@@ -1,4 +1,4 @@
-package determent.outlet.reg_composeUi.registration
+package determent.outlet.reg_compose_ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

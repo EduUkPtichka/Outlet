@@ -39,7 +39,7 @@ kotlin {
             //Jetbrains
             implementation(libs.jetbrains.kotlinxCollectionsImmutable)
 
-            //api(project(":common-resource"))
+            api(project(":common-resource"))
         }
 
         androidMain.dependencies {

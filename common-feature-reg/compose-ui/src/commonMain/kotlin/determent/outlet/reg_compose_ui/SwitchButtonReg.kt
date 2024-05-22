@@ -20,9 +20,9 @@ import determent.outlet.common_resource.MR
 import dev.icerock.moko.resources.compose.colorResource
 
 @Composable
-fun SwitchButtonReg(
+internal fun SwitchButtonReg(
     items: List<String>,
-    selectedIndex: Int = 0,
+    selectedIndex: Int,
     onClick: (Int) -> Unit,
 ) {
 

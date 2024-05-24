@@ -7,23 +7,38 @@ android-targetSdk = "34"
 # ------- Plugins Version -------
 
 #   https://github.com/JetBrains/compose-multiplatform/releases
-jetbrains-composeMultiplatformPlugin = "1.6.2"
+jetbrains-composeMultiplatformPlugin = "1.6.10"
 jetbrains-kotlinMultiplatformPlugin = "1.9.23"
+jetbrains-kotlinPluginSerialization = "1.9.23"
 agp = "8.2.2"
+google-kspPlugin = "1.9.23-1.0.19"
+touchlab-skiePlugin = "0.8.0"
 moko-mobileMultiplatformResources = "0.24.0-beta-3"
 
 # ------- Libs Version -------
 
 # Compose Multiplatform
-jetbrains-composeMultiplatformV = "1.6.2"
+jetbrains-composeMultiplatformV = "1.6.10"
 compose = "1.6.7"
 
 # Jetbrains
 jetbrains-kotlinxCollectionsImmutableV = "0.3.7"
+jetbrains-kotlinxCoroutinesCore = "1.8.1"
+jetbrains-kotlinxSerializationJson = "1.9.23"
 
+# Touchlab
+touchlab-skieConfigurationAnnotations = "0.8.0"
 
+# Arrow
+arrow = "1.2.4"
+
+# Decompose
+decompose = "2.2.3"
+
+# Android
 androidx-activityCompose = "1.9.0"
 
+# Moko
 moko-resourcesV = "0.24.0-beta-3"
 
 [libraries]
@@ -36,8 +51,26 @@ jetbrains-composeFoundation = { module = "org.jetbrains.compose.foundation:found
 jetbrains-composeUi = { module = "org.jetbrains.compose.ui:ui", version.ref = "jetbrains-composeMultiplatformV" } #runtimeOnly
 
 # Jetbrains
+jetbrains-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "jetbrains-kotlinxSerializationJson"}
 jetbrains-kotlinxCollectionsImmutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "jetbrains-kotlinxCollectionsImmutableV" }
+jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "jetbrains-kotlinxCoroutinesCore" }
+jetbrains-kotlinx-coroutines-core-js = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-js", version.ref = "jetbrains-kotlinxCoroutinesCore" }
+jetbrains-kotlinx-coroutines-core-iosx64 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-iosx64", version.ref = "jetbrains-kotlinxCoroutinesCore" }
 
+# Touchlab
+touchlab-skie-configurationAnnotations = {module = "co.touchlab.skie:configuration-annotations", version.ref = "touchlab-skieConfigurationAnnotations"}
+
+# Arrow
+arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
+arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
+arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow"}
+
+# Decompose
+arkivanov-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+arkivanov-decompose-extensionsCompose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decompose" }
+
+# Android
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
@@ -53,4 +86,7 @@ android-application-plugin = { id = "com.android.application", version.ref = "ag
 android-library-plugin = { id = "com.android.library", version.ref = "agp" }
 jetbrains-compose-multiplatform-plugin = { id = "org.jetbrains.compose", version.ref = "jetbrains-composeMultiplatformPlugin" }
 jetbrains-kotlin-multiplatform-plugin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "jetbrains-kotlinMultiplatformPlugin" }
+jetbrains-kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "jetbrains-kotlinPluginSerialization" }
+google-ksp-plugin = { id = "com.google.devtools.ksp", version.ref = "google-kspPlugin" }
+touchlab-skie-plugin = { id = "co.touchlab.skie", version.ref = "touchlab-skiePlugin"}
 moko-mobile-multiplatform-resources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-mobileMultiplatformResources" }

@@ -28,7 +28,11 @@ dependencyResolutionManagement {
     }
 }
 
-//include(":composeApp")
+// Android
+include(":android-app")
+
+// Registration
+include(":common-feature-reg:ui-compose")
+include(":common-feature-reg:block-decompose")
+
 include(":common-resource")
-//include(":common-feature-registration:compose-ui")
-include(":common-feature-reg:compose-ui")

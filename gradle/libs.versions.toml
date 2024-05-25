@@ -10,6 +10,7 @@ android-targetSdk = "34"
 jetbrains-composeMultiplatformPlugin = "1.6.10"
 jetbrains-kotlinMultiplatformPlugin = "1.9.23"
 jetbrains-kotlinPluginSerialization = "1.9.23"
+jetbrains-kotlinNativeCocoapodsPlugin = "1.9.23"
 agp = "8.2.2"
 google-kspPlugin = "1.9.23-1.0.19"
 touchlab-skiePlugin = "0.8.0"
@@ -33,13 +34,14 @@ touchlab-skieConfigurationAnnotations = "0.8.0"
 arrow = "1.2.4"
 
 # Decompose
-decompose = "2.2.3"
+decompose = "3.0.0"
 
 # Android
 androidx-activityCompose = "1.9.0"
 
 # Moko
 moko-resourcesV = "0.24.0-beta-3"
+moko-graphicsV = "0.24.0-beta-3"
 
 [libraries]
 
@@ -51,20 +53,20 @@ jetbrains-composeFoundation = { module = "org.jetbrains.compose.foundation:found
 jetbrains-composeUi = { module = "org.jetbrains.compose.ui:ui", version.ref = "jetbrains-composeMultiplatformV" } #runtimeOnly
 
 # Jetbrains
-jetbrains-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "jetbrains-kotlinxSerializationJson"}
+jetbrains-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "jetbrains-kotlinxSerializationJson" }
 jetbrains-kotlinxCollectionsImmutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "jetbrains-kotlinxCollectionsImmutableV" }
 jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "jetbrains-kotlinxCoroutinesCore" }
 jetbrains-kotlinx-coroutines-core-js = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-js", version.ref = "jetbrains-kotlinxCoroutinesCore" }
 jetbrains-kotlinx-coroutines-core-iosx64 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-iosx64", version.ref = "jetbrains-kotlinxCoroutinesCore" }
 
 # Touchlab
-touchlab-skie-configurationAnnotations = {module = "co.touchlab.skie:configuration-annotations", version.ref = "touchlab-skieConfigurationAnnotations"}
+touchlab-skie-configurationAnnotations = { module = "co.touchlab.skie:configuration-annotations", version.ref = "touchlab-skieConfigurationAnnotations" }
 
 # Arrow
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
 arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
-arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow"}
+arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
 
 # Decompose
 arkivanov-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
@@ -76,6 +78,7 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 
 moko-resources = { module = "dev.icerock.moko:resources", version.ref = "moko-resourcesV" }
+moko-graphics = { module = "dev.icerock.moko:graphics", version.ref = "moko-graphicsV" }
 moko-resourcesCompose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-resourcesV" }
 
 # ------ Plugins -------
@@ -87,6 +90,7 @@ android-library-plugin = { id = "com.android.library", version.ref = "agp" }
 jetbrains-compose-multiplatform-plugin = { id = "org.jetbrains.compose", version.ref = "jetbrains-composeMultiplatformPlugin" }
 jetbrains-kotlin-multiplatform-plugin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "jetbrains-kotlinMultiplatformPlugin" }
 jetbrains-kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "jetbrains-kotlinPluginSerialization" }
+jetbrains-kotlin-native-cocoapods-plugin = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "jetbrains-kotlinNativeCocoapodsPlugin" }
 google-ksp-plugin = { id = "com.google.devtools.ksp", version.ref = "google-kspPlugin" }
-touchlab-skie-plugin = { id = "co.touchlab.skie", version.ref = "touchlab-skiePlugin"}
+touchlab-skie-plugin = { id = "co.touchlab.skie", version.ref = "touchlab-skiePlugin" }
 moko-mobile-multiplatform-resources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-mobileMultiplatformResources" }

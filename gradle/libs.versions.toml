@@ -71,6 +71,8 @@ arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", vers
 # Decompose
 arkivanov-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 arkivanov-decompose-extensionsCompose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decompose" }
+arkivanov-essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "decompose" }
+arkivanov-essenty-stateKeeper = { module = "com.arkivanov.essenty:state-keeper", version.ref = "decompose" }
 
 # Android
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }

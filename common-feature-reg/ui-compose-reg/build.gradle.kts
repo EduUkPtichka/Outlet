@@ -1,16 +1,36 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
     alias(libs.plugins.android.library.plugin)
     alias(libs.plugins.jetbrains.compose.multiplatform.plugin)
     alias(libs.plugins.jetbrains.kotlin.multiplatform.plugin)
+    alias(libs.plugins.jetbrains.kotlin.native.cocoapods.plugin)
     alias(libs.plugins.jetbrains.kotlin.plugin.serialization)
     alias(libs.plugins.moko.mobile.multiplatform.resources)
 }
 
 kotlin {
+
+    cocoapods {
+        version = "1.0"
+        name = "cocoa_pod_ui_compose_reg"
+        ios.deploymentTarget = "15.0"
+        podfile = project.file("../iosApp/Podfile")
+
+        framework {
+            baseName = "ui_compose_reg"
+
+            export(libs.arkivanov.decompose)
+            export(libs.arkivanov.essenty.lifecycle)
+            export(libs.arkivanov.essenty.stateKeeper)
+
+            export(libs.moko.resources)
+            export(libs.moko.graphics)
+        }
+    }
 
     androidTarget {
         compilations.all {

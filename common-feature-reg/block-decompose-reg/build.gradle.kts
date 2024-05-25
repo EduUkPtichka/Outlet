@@ -39,7 +39,7 @@ kotlin {
 
             // Decompose
             implementation(libs.arkivanov.decompose)
-            //implementation(libs.arkivanov.decompose.extensionsCompose)
+            implementation(libs.arkivanov.decompose.extensionsCompose)
 
             // Jetbrains
             implementation(libs.jetbrains.kotlinxCollectionsImmutable)

@@ -52,6 +52,7 @@ kotlin {
 
             // Decompose
             implementation(libs.arkivanov.decompose)
+            implementation(libs.arkivanov.decompose.extensionsCompose)
 
             // Jetbrains
             implementation(libs.jetbrains.kotlinxCollectionsImmutable)
@@ -65,6 +66,7 @@ kotlin {
             implementation(libs.arrow.fx.coroutines)
             implementation(libs.arrow.optics)
 
+            api(project(":common-feature-reg:block-decompose-reg"))
             api(project(":common-resource"))
         }
 

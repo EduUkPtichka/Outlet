@@ -50,6 +50,13 @@ kotlin {
 
         commonMain.dependencies {
 
+            // Compose Multiplatform
+            implementation(libs.jetbrains.composeRuntime)
+            implementation(libs.jetbrains.composeFoundation)
+            implementation(libs.jetbrains.composeMaterial3)
+            implementation(libs.jetbrains.composeMaterial)
+            implementation(libs.jetbrains.composeUi)
+
             // Decompose
             implementation(libs.arkivanov.decompose)
             implementation(libs.arkivanov.decompose.extensionsCompose)
@@ -67,6 +74,7 @@ kotlin {
             implementation(libs.arrow.optics)
 
             api(project(":common-feature-reg:block-decompose-reg"))
+            api(project(":common-feature-reg:ui-compose-reg"))
             api(project(":common-resource"))
         }
 
@@ -75,6 +83,7 @@ kotlin {
         }
 
         iosMain.dependencies {
+
         }
 
     }
